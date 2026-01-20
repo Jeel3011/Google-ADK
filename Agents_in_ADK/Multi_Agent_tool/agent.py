@@ -10,14 +10,7 @@ load_dotenv()
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 def get_weather(city: str) -> dict:
-    """Retrieves the current weather report for a specified city.
 
-    Args:
-        city (str): The name of the city for which to retrieve the weather report.
-
-    Returns:
-        dict: status and result or error msg.
-    """
     if city.lower() == "new york":
         return {
             "status": "success",
@@ -34,15 +27,7 @@ def get_weather(city: str) -> dict:
 
 
 def get_current_time(city: str) -> dict:
-    """Returns the current time in a specified city.
-
-    Args:
-        city (str): The name of the city for which to retrieve the current time.
-
-    Returns:
-        dict: status and result or error msg.
-    """
-
+   
     if city.lower() == "new york":
         tz_identifier = "America/New_York"
     else:
